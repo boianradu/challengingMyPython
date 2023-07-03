@@ -12,7 +12,7 @@ def create_app(test_config=None):
         SECRET_KEY="dev",
         DATABASE=os.path.join(app.instance_path, "flaskrapp.sqlite"),
     )
-    app.static_folder = 'static'
+    app.static_folder = "static"
     if test_config is None:
         # load the instance config, if it exists, when not testing
         app.config.from_pyfile("config.py", silent=True)
@@ -34,4 +34,10 @@ def create_app(test_config=None):
     db.init_app(app)
 
     app.register_blueprint(auth.bp)
+
+    @app.route("/", defaults={"path": ""})
+    @app.route("/<path:path>")
+    def catch_all(path):
+        return "You want path: %s" % path
+
     return app
