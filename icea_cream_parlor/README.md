@@ -49,3 +49,8 @@ Sample Output
 
 1 4
 1 2
+
+Sunny and Johnny make the following two trips to the parlor:
+
+The first time, they pool together  dollars. There are five flavors available that day and flavors  and  have a total cost of .
+The second time, they pool together  dollars. There are four flavors available that day and flavors  and  have a total cost of .
