@@ -18,7 +18,7 @@ print(min(integer_list)) # 1
 print(integer_list.index(3)) # 2
 print(integer_list.index(1)) # 0
 print(integer_list.count(1)) # 3
-print(integer_list.count(9)) # 0
+print( integer_list.count(88)) # 0
 
 
 # extend(other_list): Adds the elements in other_list to the end of the original list;
